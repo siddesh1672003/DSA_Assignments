@@ -1,22 +1,22 @@
 #include<stdio.h>
 
-struct Student 
+struct Student1 
 {
 	int roll_no;
 	char name[50];
-	float percentage;
+	float per;
 };
 
 int main()
 {
-	struct Student s[5];
-	struct Student temp;
+	struct Student1 s[5];
+	struct Student1 temp;
 	int i, j; 
 	
 	//Taking Data Input from user
 	for(i = 0; i < 5; i++)
 	{
-		printf("Enter Student%d Roll Number, Name and Percentage : ", i+1);
+		printf("Enter Student %d 's Roll Number, Name and Percentage : ", i+1);
 		scanf("%d%s%f", &s[i].roll_no,s[i].name,&s[i].percentage);
 	    
 	}
@@ -36,12 +36,12 @@ int main()
 		}
 	}	
 	
-	// displaying sorted data as output
+	// For displaying sorted data as output
 	for(i = 0; i < 5; i++)
 	{
-		printf("Roll Number : %d\n", s[i].roll_no);
-		printf("Name : %s\n", s[i].name);
-		printf("Percentage : %f\n", s[i].percentage);
+		printf("Roll Number is : %d\n", s[i].roll_no);
+		printf("Name is : %s\n", s[i].name);
+		printf("Percentage is : %f\n", s[i].percentage);
 		printf("\n");
 	}
 	
