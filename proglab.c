@@ -4,7 +4,7 @@ int main()
     int rn[10], mks[10],temp_rn,temp_mks,i,j;
     for(i=0;i<10;i++)
     {
-        printf("Enter the Roll no and Marks of a student%d :",i+1);
+        printf("Enter the Roll Number and Marks of the  student %d :",i+1);
         scanf("%d%d",&rn[i],&mks[i]);
     } 
     for(i=0;i<9;i++)
@@ -24,8 +24,8 @@ int main()
         }
     for(i=0;i<10;i++)
     {
-        printf("Roll no : %d\n",rn[i]);
-        printf("Marks : %d\n",mks[i]);
+        printf("Roll no is: %d\n",rn[i]);
+        printf("Marks is : %d\n",mks[i]);
         printf("\n");
     }
 }
