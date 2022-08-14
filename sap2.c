@@ -1,10 +1,10 @@
-/*  Author: Siddesh Patil   Branch: IT  Roll no.: 44
+/*  Author: Prasad Anil Alai   Branch: IT  Roll no.: 02
     Define a structure data type called time_struct containing 3 members int hour, int minute and int second.
     1.Input time    2.Display time  3.Update time(increment time by 1 second)
 */
 #include <stdio.h>
 
-void input(); //declaring functions
+void input(); // for declaring functions
 void display();
 void update();
 
@@ -21,8 +21,8 @@ int main()
 
     while (1) //loops the program
     {   //displays menu 
-        printf("\n*****Select a function to be performed*****");
-        printf("\n1.Input time\n2.Display time\n3.Update time\n4.Exit");
+        printf("\n***Select a function to be performed***");
+        printf("\n1.Input time \n2.Display time \n3.Update time \n4.Exit");
         printf("\nEnter your choice : ");
         scanf("%d", &choice); //saves the choice od=f user    
 
