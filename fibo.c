@@ -2,13 +2,13 @@
 int main()
 {
     int a,b,c,n;
-    printf("Enter the number:");// accepting a number
+    printf("Enter the number:");// for accepting a number
     scanf("%d",&n);
     a=0;
     b=1;
     c=a+b;
-    if(n==0) // checking if the number is fibonacci number and printing output
-        printf("%d is fibonacci number",n);
+    if(n==0) // checking if the number is fibonacci number and further printing output
+        printf("%d is a Fibonacci Number",n);
     while(c<n) 
     {
          a=b;  
@@ -17,7 +17,7 @@ int main()
     }
     // checking if the number is fibonacci number and printing output
     if(c==n)
-        printf("%d is fibonacci number",c);
+        printf("%d is a Fibonacci Number",c);
     else
-        printf("%d is not a fibonacci number",n);
+        printf("%d is not a Fibonacci Number",n);
 }
