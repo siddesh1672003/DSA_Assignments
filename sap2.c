@@ -1,11 +1,12 @@
 /*  Author: Siddesh Patil   Branch: IT  Roll no.: 44
+    Author 2 : Prasad Anil Alai  Branch : IT  Roll No: 02
     Define a structure data type called time_struct containing 3 members int hour, int minute and int second.
     1.Input time    2.Display time  3.Update time(increment time by 1 second)
 */
 #include <stdio.h>
 
 void input(); //declaring functions
-void display();
+void disp();
 void update();
 
 struct time_struct //declaring and defining structure
@@ -31,7 +32,7 @@ int main()
             case 1: input();
                     break;
         
-            case 2: display();
+            case 2: disp();
                     break;
         
             case 3: update();
@@ -75,11 +76,11 @@ void input()
 
 }
 
-void display()
+void disp()
 {
     if (count==0) //checks if time was input before display function was called
     {
-        printf("Please input time first\n");
+        printf("Kindly input time first\n");
     }
     else
     {
