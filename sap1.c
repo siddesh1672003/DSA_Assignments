@@ -1,7 +1,7 @@
-//Author: Siddesh Patil   Branch: IT  Roll no.: 44
-//Write a menu driven program to perform the following operations in an ARRAY to 1.Insert 2.Delete 3.Traverse 4.Search
+//Author: Prasad Anil Alai   Branch: IT  Roll no.: 02
+//Write a menu driven program to perform the following operations in an Array to 1.Insert 2.Delete 3.Traverse 4.Search
 #include <stdio.h>
-#define size 5 //setting stack size
+#define size 7 //setting stack size
 
 int array[size], top=-1; //declaring array, top and functions
 void insert();
@@ -15,9 +15,9 @@ int main()
 
     while(1) //to loop the program
     {   //printing a menu
-        printf("\n*****Select a function to be performed*****");
-        printf("\n1.Insert\n2.Delete\n3.Traverse\n4.Search\n5.Exit");
-        printf("\nEnter your choice : ");
+        printf("\n***Select a function to be performed***");
+        printf("\n1.Insert \n2.Delete \n3.Traverse \n4.Search \n5.Exit");
+        printf("\n Select a choice : ");
         scanf("%d", &choice); //saves the users choice
  
         switch (choice)
