@@ -1,7 +1,7 @@
 //Author: Siddesh Patil   Branch: IT  Roll no.: 44
 //Write a menu driven program to perform the following operations in an ARRAY to 1.Insert 2.Delete 3.Traverse 4.Search
 #include <stdio.h>
-#define size 7 //setting stack size
+#define size 6 //setting stack size
 
 int array[size], top=-1; //declaring array, top and functions
 void insert();
@@ -78,7 +78,8 @@ void traverse()
 {
     if (top==-1)
     {
-        printf("Underflow!\n");
+        printf("Stack Underflow!\n");
+
     }
     else
     {
@@ -95,7 +96,7 @@ void search()
     int count=0, choice;
     if (top==-1)
     {
-        printf("Underflow!\n");
+        printf(" Stack Underflow!\n");
     }
     else
     {
