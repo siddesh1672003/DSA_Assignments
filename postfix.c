@@ -55,7 +55,7 @@ int eval(char *exp)
                 case '/':
                     push(val2 / val1);break;
                 case '%':
-                    push(val2 / val1);break;
+                    push(val2 % val1);break;
             }
         }
     }
