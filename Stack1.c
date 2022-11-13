@@ -1,74 +1,114 @@
 #include<stdio.h>
 #include<stdlib.h>
-#include<conio.h>
-#define max = 10
 
-/*int top, a[max];
-
-void init (void)
+struct node
 {
-top=-1;
+	int info;
+	struct node *next;
+};
+
+struct node *list = NULL;
+
+struct node* getnode()
+{
+	return (struct node*)malloc(sizeof(struct node));
 }
 
-void isFull (void)
+void push(int x)
 {
-if (top == max-1)
-printf("Stack is Overflow");
+	if(list == NULL)
+	{
+		struct node *nn;
+		nn = getnode();
+		nn->info = x;
+		nn->next = NULL;
+		list = nn;
+
+	}
+	else
+	{
+		struct node *nn, *temp;
+		nn = getnode();
+		temp = list;
+		nn->info = x;
+		nn->next = NULL;
+		while(temp->next!=NULL)
+		{
+			temp = temp->next;
+		}
+		temp->next = nn;
+	}
 }
 
-void isEmpty (void)
+void pop()
 {
-if (top==-1)
-printf("Stack is Underflow");
+	if(list == NULL)
+	{
+		printf("Stack is Empty!\n");
+	}
+	else
+	{
+		struct node *temp, *prev;
+		temp = list;
+		while(temp->next!=NULL)
+		{
+			prev = temp;
+			temp = temp->next;
+		}
+		prev->next = NULL;
+		printf("%d got popped!\n",temp->info);
+	}
 }
 
-//void push (void)
-
-//void pop (void)
-
-//void peek (void)*/
+void show()
+{
+	if(list == NULL)
+	{
+		printf("Stack is Empty!\n");
+	}
+	else
+	{
+		struct node *temp;
+		temp = list;
+		while(temp!=NULL)
+		{
+			printf("%d\n", temp->info);
+			temp = temp->next;
+		}
+	}
+}
 
 int main()
 {
-int top=-1,n,choice;
-    printf("\n Enter the size of STACK[MAX=100]:");
-    scanf("%d",&n);
-    printf("\n\t STACK OPERATIONS USING ARRAY");
-    printf("\n\t--------------------------------");
-    printf("\n\t 1.PUSH\n\t 2.POP\n\t 3.DISPLAY\n\t 4.EXIT");
-    /*do
-    {
-        printf("\n Enter the Choice:");
-        scanf("%d",&choice);
-        switch(choice)
-        {
+	
+    int ch, n;
+    while(1) {
+        printf("\n------stack_menu-------");
+        printf("\n1. push");
+        printf("\n2. pop");
+        printf("\n3. show");
+        printf("\n4. Exit");
+
+        printf("\nEnter Your Choice : ");
+        scanf("%d", &ch);
+        switch(ch){
             case 1:
-            {
-                push();
-                break;
-            }
+                printf("Enter a Number to push : ");
+                scanf("%d", &n);
+                push(n);break;
             case 2:
-            {
                 pop();
                 break;
-            }
             case 3:
-            {
-                display();
+                show();
                 break;
-            }
             case 4:
-            {
-                printf("\n\t EXIT POINT ");
+                exit(0);
                 break;
-            }
             default:
-            {
-                printf ("\n\t Please Enter a Valid Choice(1/2/3/4)");
-            }
-                
+                printf("\nInvalid Choice! Try Again!");
         }
-    }
-    while(choice!=4);*/
+	}
+
     return 0;
 }
